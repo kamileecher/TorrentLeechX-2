@@ -111,8 +111,8 @@ Optional Configuration Variables | Descripion
 | `YTDL_COMMAND` | custom command for `/ytdl`
 | `GYTDL_COMMAND` | custom command for `/gytdl`
 | `GLEECH_COMMAND` | custom command for `/gleech`
-| `TELEGRAM_LEECH_COMMAND` | custom command for `/tleechzip`
-| `TELEGRAM_LEECH_UNZIP_COMMAND` | custom command for `/tleechunzip`
+| `TELEGRAM_LEECH_COMMAND` | custom command for `/tleecharchive`
+| `TELEGRAM_LEECH_UNZIP_COMMAND` | custom command for `/tleechextract`
 | `PYTDL_COMMAND` | custom command for `/pytdl`
 | `CLONE_COMMAND_G` | custom command for `/gclone`
 | `UPLOAD_COMMAND` | custom command for `/upload` 
@@ -131,7 +131,9 @@ Optional Configuration Variables | Descripion
 | `HELP_COMMAND` | Custom command for `/help`
 | `STATUS_COMMAND` | Custom Command for `/status`
 | `LOG_COMMAND` | Custom Command for `log`
-| `RCLONE_CONF_URL` | set direct  url for rclone.conf 
+| `RCLONE_CONF_URL` | set direct  url for rclone.conf
+| `SPEEDTEST` | set custom SpeedtestCommand
+| `TSEARCH_COMMAND` | set custom command for torrent search help
 
 ---
 
@@ -167,13 +169,13 @@ client_secret =
 |`/gytdl`| This will download and upload to your cloud.
 |`/gpytdl`| This download youtube playlist and upload to your cloud.
 |`/leech`| This command should be used as reply to a magnetic link, a torrent link, or a direct link. this command will SPAM the chat and send the downloads a seperate files, if there is more than one file, in the specified torrent
-|`/leechzip`| This command should be used as reply to a magnetic link, a torrent link, or a direct link. [This command will create a .tar.gz file of the output directory, and send the files in the chat, splited into PARTS of 1024MiB each, due to Telegram limitations]
+|`/leecharchive`| This command should be used as reply to a magnetic link, a torrent link, or a direct link. [This command will create a .tar.gz file of the output directory, and send the files in the chat, splited into PARTS of 1024MiB each, due to Telegram limitations]
 |`/gleech`| This command should be used as reply to a magnetic link, a torrent link, or a direct link. And this will download the files from the given link or torrent and will upload to the cloud using rclone.
-|`/gleechzip` | This command will compress the folder/file and will upload to your cloud.
-| `/leechunzip`| This will unarchive file and dupload to telegram.
-|`/gleechunzip`| This will unarchive file and upload to cloud.
+|`/gleecharchive` | This command will compress the folder/file and will upload to your cloud.
+| `/leechextract`| This will unarchive file and dupload to telegram.
+|`/gleechextract`| This will unarchive file and upload to cloud.
 |`/tleech`| This will mirror the telegram files to ur respective cloud cloud.
-|`/tleechunzip`| This will unarchive telegram file and upload to cloud.
+|`/tleechextract`| This will unarchive telegram file and upload to cloud.
 |`/getsize`| This will give you total size of your destination folder in cloud.
 |`/renewme`| This will clear the remains of downloads which are not getting deleted after upload of the file or after /cancel command.
 | `/rename`| u can add custom name as prefix of the original file name...Like if your file name is `gk.txt` uploaded will be what u add in `CUSTOM_FILE_NAME` + `gk.txt`..And also added custom name like...You have to pass link as ..`www.download.me/gk.txt new.txt`..the file will be uploaded as `new.txt`.
@@ -189,8 +191,8 @@ client_secret =
 ---
 ## 🔧Commands to be set via Botfather (will only work if you set mentions from custom cmds).
     leech - leech any torrent/magnet/direct-download link to Telegram 
-	leechunzip - This will unarchive file and upload to telegram.
-    leechzip - leech any torrent/magnet/direct-download link to Telegram and Upload It as .tar.gz acrhive...
+	leechextract - This will unarchive file and upload to telegram.
+    leecharchive - leech any torrent/magnet/direct-download link to Telegram and Upload It as .tar.gz acrhive...
     ytdl - This command should be used as reply to a supported link
     pytdl - This command will download videos from youtube playlist link and will upload to telegram.	
 	toggledoc - choose whether the file shall be uploaded as doc or not
@@ -198,13 +200,13 @@ client_secret =
 	savethumbnail - save thumbnail
     clearthumbnail - clear thumbnail
     tleech - This will mirror the telegram files to ur respective cloud .
-    tleechunzip - This will unarchive telegram file and upload to cloud.
+    tleechextract - This will unarchive telegram file and upload to cloud.
     gclone - This command is used to clone gdrive files or folder using gclone
     gytdl - This will download and upload to your cloud.
     gpytdl - This download youtube playlist and upload to your cloud.
     gleech - leech any torrent/magnet/direct-download link to cloud
-    gleechzip - leech any torrent/magnet/direct-download link to Cloud and Upload It as .tar.gz acrhive...
-    gleechunzip - This will unarchive file and upload to cloud.
+    gleecharchive - leech any torrent/magnet/direct-download link to Cloud and Upload It as .tar.gz acrhive...
+    gleechextract - This will unarchive file and upload to cloud.
     getsize - This will give you total size of your destination folder in cloud.
     rename - rename the file 
     help - send help 

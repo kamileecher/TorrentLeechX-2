@@ -75,30 +75,12 @@ from tobrot.plugins.status_message_fn import (
     upload_as_video
 )
 
-botcmds = [
-        (f'{BotCommands.LeechCommand}','📨 [Reply] Leech any Torrent/ Magnet/ Direct Link '),
-        (f'{BotCommands.ExtractCommand}', '🔐 Unarchive items . .'),
-        (f'{BotCommands.ArchiveCommand}','🗜 Archive as .tar.gz acrhive... '),
-        (f'{BotCommands.ToggleDocCommand}','📂 Toggle to Document Upload '),
-        (f'{BotCommands.ToggleVidCommand}','🎞 Toggle to Streamable Upload '),
-        (f'{BotCommands.SaveCommand}','🖼 Save Thumbnail For Uploads'),
-        (f'{BotCommands.ClearCommand}','🕹 Clear Thumbnail '),
-        (f'{BotCommands.RenameCommand}','♻️ [Reply] Rename Telegram File '),
-        (f'{BotCommands.StatusCommand}','🖲 Show Bot stats and concurrent Downloads'),
-        (f'{BotCommands.SpeedCommand}','📡 Get Current Server Speed of Your Bot'),
-        (f'{BotCommands.YtdlCommand}','🧲 [Reply] YT-DL Links for Uploading...'),
-        (f'{BotCommands.PytdlCommand}','🧧 [Reply] YT-DL Playlists Links for Uploading...'),
-        (f'{BotCommands.HelpCommand}','🆘 Get Help, How to Use and What to Do. . .'),
-        (f'{BotCommands.LogCommand}','🔀 Get the Bot Log [Owner Only]'),
-        (f'{BotCommands.TsHelpCommand}','🌐 Get help for Torrent Search Module'),
-    ]
 
 if __name__ == "__main__":
     # create download directory, if not exist
     if not os.path.isdir(DOWNLOAD_LOCATION):
         os.makedirs(DOWNLOAD_LOCATION)
 
-    bot.set_my_commands(botcmds)
     # Starting The Bot
     app.start()
     ##############################################################################
