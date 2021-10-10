@@ -117,8 +117,8 @@ Optional Configuration Variables | Descripion
 | `CLONE_COMMAND_G` | custom command for `/gclone`
 | `UPLOAD_COMMAND` | custom command for `/upload` 
 | `RENEWME_COMMAND` | custom command for `/renewme`
-| `SAVE_THUMBNAIL` | custom command for `/savethumbnail`
-| `CLEAR_THUMBNAIL` | custom command for `/clearthumbnail`
+| `SAVE_THUMBNAIL` | custom command for `/savethumb`
+| `CLEAR_THUMBNAIL` | custom command for `/clearthumb`
 | `GET_SIZE_G` | custom command for `/getsize`
 | `UPLOAD_AS_DOC` | Takes two option True or False. If True file will be uploaded as document. This is for people who wants video files as document instead of streamable.
 | `INDEX_LINK` | (Without / at last of the link, otherwise u will get error) During creating index, plz fill Default Root ID with the id of your DESTINATION_FOLDER after creating. Otherwise index will not work properly.
@@ -182,8 +182,10 @@ client_secret =
 | `/toggledoc` | it used for toggling to be files if shall it be uploaded as doc via direct inchat cmd...**any users can now choose if their files will be upload as doc or streamabe...**
 | `/togglevid` | it used for toggling to be files if shall it be uploaded as vid via direct inchat cmd...**any users can now choose if their files will be upload as doc or streamabe...**
 | `/status`| show bot stats and concurrent downloads
-| `/savethumbnail`| save the thumbnail
-| `/clearthumbnail`| clear the thumbnail
+| `/savethumb`| save the thumbnail
+| `/clearthumb`| clear the thumbnail
+| `/tshelp` | get help for torrent search module
+| `/speedtest` | check speedtest of the host
 | `/help`| send help
 ---
 ## END OF Variable Explanations 👆
@@ -197,8 +199,8 @@ client_secret =
     pytdl - This command will download videos from youtube playlist link and will upload to telegram.	
 	toggledoc - choose whether the file shall be uploaded as doc or not
     togglevid - choose whether the file shall be uploaded as streamable or not
-	savethumbnail - save thumbnail
-    clearthumbnail - clear thumbnail
+	savethumb - save thumbnail
+    clearthumb - clear thumbnail
     tleech - This will mirror the telegram files to ur respective cloud .
     tleechextract - This will unarchive telegram file and upload to cloud.
     gclone - This command is used to clone gdrive files or folder using gclone
@@ -210,6 +212,8 @@ client_secret =
     getsize - This will give you total size of your destination folder in cloud.
     rename - rename the file 
     help - send help 
+    tshelp - get help for torrent search module
+|   speedtest - check speedtest of the host
     status - show bot stats and concurrent downloads
     renewme - clear all downloads (admin only)⚠️
     log - This will send you a txt file of the logs.(admin only)⚠️
