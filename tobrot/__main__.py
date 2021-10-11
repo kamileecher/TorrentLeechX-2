@@ -14,8 +14,6 @@ from pyrogram.handlers import CallbackQueryHandler, MessageHandler
 
 from tobrot import app, bot
 from tobrot import (
-    API_HASH,
-    APP_ID,
     AUTH_CHANNEL,
     CANCEL_COMMAND_G,
     CLEAR_THUMBNAIL,
@@ -37,7 +35,6 @@ from tobrot import (
     STATUS_COMMAND,
     TELEGRAM_LEECH_UNZIP_COMMAND,
     TELEGRAM_LEECH_COMMAND,
-    TG_BOT_TOKEN,
     UPLOAD_COMMAND,
     YTDL_COMMAND,
     GYTDL_COMMAND,
